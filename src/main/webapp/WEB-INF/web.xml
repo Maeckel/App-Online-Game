@@ -47,39 +47,39 @@
         <url-pattern>/Inscription</url-pattern>
     </servlet-mapping>
     <servlet>
-    <servlet-name>Connexion</servlet-name>
-    <jsp-file>authentification.jsp</jsp-file>
+        <servlet-name>Connexion</servlet-name>
+        <jsp-file>authentification.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-    <servlet-name>Connexion</servlet-name>
-    <url-pattern>/connexion</url-pattern>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/connexion</url-pattern>
     </servlet-mapping>
     <servlet>
-    <servlet-name>Menu</servlet-name>
-    <jsp-file>menu.jsp</jsp-file>
+        <servlet-name>Menu</servlet-name>
+        <jsp-file>menu.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-    <servlet-name>Menu</servlet-name>
-    <url-pattern>/menu</url-pattern>
+        <servlet-name>Menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
     </servlet-mapping>
     <servlet>
-    <servlet-name>Enregistrement</servlet-name>
-    <jsp-file>inscription.jsp</jsp-file>
+        <servlet-name>Enregistrement</servlet-name>
+        <jsp-file>inscription.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-    <servlet-name>Enregistrement</servlet-name>
-    <url-pattern>/inscription</url-pattern>
+        <servlet-name>Enregistrement</servlet-name>
+        <url-pattern>/inscription</url-pattern>
     </servlet-mapping>
     <servlet>
-    <servlet-name>Jouer</servlet-name>
-    <jsp-file>jeu.jsp</jsp-file>
+        <servlet-name>Jouer</servlet-name>
+        <jsp-file>jeu.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-    <servlet-name>Jouer</servlet-name>
-    <url-pattern>/jeu</url-pattern>
+        <servlet-name>Jouer</servlet-name>
+        <url-pattern>/jeu</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-    <welcome-file>connexion</welcome-file>
+        <welcome-file>connexion</welcome-file>
     </welcome-file-list>
     <session-config>
         <session-timeout>

@@ -21,18 +21,32 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Menu</title>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/menu_style.css">
     </head>
     <body>
-        <h1>Menu</h1>
-        <br/>
-        <% out.println("<p>Bonjour " + prenom + " " + nom + " !</p>");
+        <header>
+            <div class="header-content">
+                <h1>NT2 - Jeux en ligne</h1>
+                <a href="connexion">Se déconnecter</a>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Menu</h1>
+            <br/>
+            <% out.println("<h4>Bonjour " + prenom + " " + nom + " !");
             if(age >= 18){
-                out.println("<p>Vous êtes autorisé à jouer.</p>");
+                out.println("Vous êtes autorisé à jouer.</h4>");
                 out.println("</br>");
                 out.println("<a href='jeu'>Commencez une nouvelle partie</a>");
             } else {
-                out.println("<p>Vous n'êtes pas autorisé à jouer.</p>");
+                out.println("Vous n'êtes pas autorisé à jouer.</h4>");
             }
-            out.println("</BODY></HTML>");                                      %>
+            out.println("</BODY></HTML>"); %>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 - Tous droits réservés</p>
+            </div>
+        </footer>   
     </body>
 </html>

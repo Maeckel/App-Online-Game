@@ -28,9 +28,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Jeu</title>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/jeu_style.css">
     </head>
     <body>
-        <div style="float: right;"><a href="menu">Retour à l'accueil</a></div>
+        <header>
+            <div class="header-content">
+                <h1>NT2 - Jeux en ligne</h1>
+                <a href="menu">Retour à l'accueil</a>
+            </div>
+        </header>
+        <div class="container">
         <h1>Capturez Monsieur X</h1>
         <h2>Chargez une nouvelle carte de la ville :</h2>
         <form action="Jeu" enctype="multipart/form-data" method="POST">
@@ -43,11 +50,9 @@
         <br/>
         <% out.println("<h4>Nombre de tours : " + compteur + "/20</h4>"); %>
         <br/>
-        <style>
-            table, th, td { border: 1px solid black; border-collapse: collapse; }
-            td.black { background-color: black; }
-        </style>
-        <table style="width:25%">
+        </div>
+        <div class="tableau-container">
+        <table style="width:40%">
         <% } %>
         <%  if(tableau != null){
                 for (List<String> row : tableau) {
@@ -69,7 +74,7 @@
         <%  if(tableau != null && compteur < 20){ %>
         <br/>
         <form action="Mouvement" method="POST">
-        <div>
+        <div class="mouvement-bloc">
           <h4>A :</h4>
           <input type="radio" id="moveA1" name="move" value="hautA" />
           <label for="moveA1">Haut</label>
@@ -85,7 +90,7 @@
           
           <button type="submit">Envoyer</button>
         </div>
-        <div>
+        <div class="mouvement-bloc">
           <h4>B :</h4>
           <input type="radio" id="moveB1" name="move" value="hautB" />
           <label for="moveB1">Haut</label>
@@ -101,7 +106,7 @@
           
           <button type="submit">Envoyer</button>
         </div>
-        <div>
+        <div class="mouvement-bloc">
           <h4>C :</h4>
           <input type="radio" id="moveC1" name="move" value="hautC" />
           <label for="moveC1">Haut</label>
@@ -117,7 +122,7 @@
           
           <button type="submit">Envoyer</button>
         </div>
-        <div>
+        <div class="mouvement-bloc">
           <h4>D :</h4>
           <input type="radio" id="moveD1" name="move" value="hautD" />
           <label for="moveD1">Haut</label>
@@ -134,6 +139,7 @@
           <button type="submit">Envoyer</button>
         </div>
       </form>
+      </div>
       <% } %>
       <% } %>
       <% if(tableau != null && compteur <= 20 && victoire != null){
@@ -143,5 +149,10 @@
             out.println("<h4>Perdu ! Le nombre maximal de tours est atteint.</h4>");
           }
           %>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 - Tous droits réservés</p>
+            </div>
+        </footer>
     </body>
 </html>
